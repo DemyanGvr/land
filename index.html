@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Видео на фоне</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            overflow-y: auto;
+            background: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            z-index: -1;
+        }
+        video.background {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: cover;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.4rem;
+            max-width: 900px;
+            font-weight: 500;
+        }
+        .video-section {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            width: 85%;
+            max-width: 1200px;
+            margin-top: 50px;
+        }
+        .video-gallery {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            width: 65%;
+        }
+        .video-gallery video {
+            width: 100%;
+            max-width: 400px;
+            margin: 20px 0;
+            border-radius: 10px;
+            pointer-events: none;
+        }
+        .video-description {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .testimonial-box {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 50px;
+            border-radius: 10px;
+            width: 30%;
+            text-align: left;
+            font-size: 1.2rem;
+            font-weight: 500;
+            position: relative;
+            color: white;
+            height: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .testimonial-box h3 {
+            font-size: 1.6rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video class="background" autoplay loop muted>
+            <source src="14295993-hd_1920_1080_60fps.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="content">
+        <h1>Открой для себя новые возможности!</h1>
+        <p>Представь, что твоя жизнь может измениться в один момент. Ты больше не зависишь от рутины, не ждёшь годами, когда сможешь позволить себе то, о чём мечтаешь. Всё, что казалось недоступным, становится ближе, чем ты думал.</p>
+    </div>
+    <div class="video-section">
+        <div class="video-gallery">
+            <video autoplay loop muted>
+                <source src="6266430-uhd_2160_3840_25fps.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">✨ Всё может измениться в один момент. Достаточно сделать шаг навстречу новым возможностям.</p>
+            <video autoplay loop muted>
+                <source src="9807882-uhd-2160-3840-25fps.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">🌃 Жизнь в большом городе – это движение вперёд, уверенность и свобода выбора. Всё зависит только от тебя.</p>
+            <video autoplay loop muted>
+                <source src="5704056-uhd-2160-3840-25fps.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">💎 Возможности есть у каждого, но используют их не все. Сделай первый шаг к жизни, о которой мечтал.</p>
+            <video autoplay loop muted>
+                <source src="11939614-2160-3840-60fps.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">🏎 Финансовая свобода – это комфорт, скорость и уверенность в завтрашнем дне. Всё это ближе, чем кажется.</p>
+        </div>
+        <div class="reviews-container">
+        <div class="testimonial-box">
+            <h3>Уже более 10 000 человек начали исполнять свои мечты</h3>
+            <p id="testimonial"></p>
+        </div>
+
+        <div class="photo-gallery-container">
+            <div class="photo-gallery-box">
+            <h2 class="gallery-title">Люди, которые забрали свое🔥🔥🔥</h2>
+        <div class="photo-gallery">
+            <div class="photo-item">
+            <img src="images/a2e59a838f246ec4ddcfbecc233a7c78.jpg" alt="Фото 1">
+            <p>Алексей 23 года, г.Астана</p>
+    </div>
+    <div class="photo-item">
+            <img src="images/d1784218429940a5eee5957d24905247.PNG" alt="Фото 2">
+            <p>Анастасия 24 года, г. Санкт-Петербург</p>
+        </div>
+        <div class="photo-item">
+            <img src="images/eaca63470029391349e291c859eedeef.jpg" alt="Фото 3">
+            <p>Илья 19 лет, г. Москва</p>
+        </div>
+        <div class="photo-item">    
+            <img src="images/1234.jpg" alt="Фото 4">
+            <p>Данил 32 года, г. Тбилиси</p>
+        </div>
+        <div class="photo-item">
+            <img src="images/man-with-photo-camera-his-holidays.jpg" alt="Фото 5">
+            <p>Вазген 28 лет, г. Варшава</p>
+        </div>
+        <div class="photo-item">
+            <img src="images/portrait-stylish-handsome-man-near-car-outdoors.jpg" alt="Фото 6">
+            <p>Никита 35 лет, г. Ереван</p>
+        </div>
+        <div class="photo-item">
+            <img src="images/th.jpg" alt="Фото 7">
+            <p>Людмила 42 года, Барселона</p>
+        </div>
+        <div class="photo-item">
+            <img src="images/vertical-shot-attractive-african-american-man-posing-smiling.jpg" alt="Фото 8">
+            <p>Даниэль 22 года, г. Милан</p>
+        </div>
+        <div class="photo-item">
+            <img src="images/young-businessman-walking-street.jpg" alt="Фото 9">
+            <p>Максим 29 лет, г. Краснодар</p>
+        </div>
+        
+    </div>
+    <script>
+        const testimonials = [
+            "🔥 Алексей, 27 лет (Москва) – \"Раньше жил от зарплаты до зарплаты, но однажды решил попробовать. Уже через три дня я выиграл сумму, которой хватило, чтобы закрыть кредит! Теперь я понимаю, что всё зависит от наших решений.\"",
+            "💰 Ольга, 32 года (Санкт-Петербург) – \"Решила попробовать ради интереса и уже через пару часов мой баланс вырос в 5 раз! На следующий день я внесла первый взнос за новую машину. Это не сказка – это шанс, который нельзя упускать.\"",
+            "🚀 Дмитрий, 24 года (Казань) – \"Копить на машину пришлось бы три года, но я решил рискнуть. Вложил 5000 рублей и через неделю на счету было уже 350 000! Купил BMW и вложил деньги в новые возможности. Теперь я знаю, что шанс есть у каждого.\"",
+            "🌍 Екатерина, 30 лет (Краснодар) – \"Всегда хотела большего, но привычная работа не давала возможностей. За несколько дней я выиграла сумму, которой хватило на аренду квартиры на полгода вперёд. Теперь путешествую и живу так, как всегда хотела!\"",
+            "🌟 Максим, 29 лет (Новосибирск) – \"Никогда не думал, что смогу позволить себе собственную квартиру. Но однажды попробовал – и буквально за месяц собрал на первоначальный взнос! Сейчас живу в своей квартире и больше не плачу за аренду.\"",
+            "🏆 Ирина, 26 лет (Екатеринбург) – \"Решила попробовать ради интереса, и буквально за пару часов удвоила свой баланс! Через месяц купила путёвку на море и наконец-то осуществила свою давнюю мечту. Главное – не бояться действовать!\"",
+            "🔥 Артём, 35 лет (Сочи) – \"Работал по 12 часов в день, чтобы прокормить семью. Теперь зарабатываю в разы больше, но трачу всего пару часов в день. Жена наконец-то ушла с нелюбимой работы, а дети получают лучшее образование.\""
+        ];
+        let index = 0;
+        function updateTestimonial() {
+            document.getElementById("testimonial").textContent = testimonials[index];
+            index = (index + 1) % testimonials.length;
+        }
+        updateTestimonial();
+        setInterval(updateTestimonial, 10000);      
+    </script>
+</body>
+</html>
