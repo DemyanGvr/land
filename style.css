@@ -61,8 +61,12 @@
 
 
 .container {
+    display: flex;
+    flex-direction: column; /* Элементы идут в колонку на маленьких экранах */
+    align-items: center;
     max-width: 1200px; /* Ограничение ширины */
     width: 100%;
+    grid-template-columns: 2fr;
 }
 .reviews-container {
     display: flex;
@@ -97,6 +101,18 @@ body {
     .video-section {
         flex-direction: column;
         align-items: center;
+    }
+     body {
+        font-size: 14px; /* Уменьшаем текст */
+    }
+    
+    .container {
+        flex-direction: column; /* Ставим элементы в колонку */
+    }
+
+    .image {
+        width: 100%; /* Делаем изображения на всю ширину */
+        height: auto;
     }
     .testimonial-box {
         width: 90%;
