@@ -1,3 +1,21 @@
+.telegram-button {
+    display: inline-block;
+    padding: 20px 40px; /* Увеличенные отступы */
+    font-size: 22px; /* Крупнее текст */
+    font-weight: bold;
+    color: white;
+    background-color: #ff0000; /* Красный цвет */
+    border-radius: 12px; /* Закруглённые края */
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.telegram-button:hover {
+    background-color: #cc0000; /* Чуть темнее при наведении */
+    transform: scale(1.05); /* Лёгкое увеличение */
+}
+
 
 .photo-gallery img {
     width: 100%;
